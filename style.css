@@ -1,6 +1,6 @@
-canvas {
-    border:2px solid #0000;
-    background-color:#fff;
+canvas{
+    border:2px solid hsla(0, 0%, 0%, 0);
+    background-color:#d3d3d3;
 
 }
 #game-over {
@@ -10,32 +10,5 @@ canvas {
 .game-container{
     margin-top:20px;
 }
-const canvas = document.getElementById('gameCanvas');
-const ctx = canvas.getContext('2d');
 
-const player ={
-    x:50,
-    y:50,
-    size:30,
-    color:'blue',
-    speed:5
-};
-const enemy ={
-    x:300,
-    y:300,
-    size:30,
-    color:'red',
-    dx:2,
-    dy:2
-};
-let score =0;
-let lives =3;
-let gameOver = false;
 
-function drawBox(x, y, size, color){
-    ctx.fillStyle =color;
-    ctx.fillRect(x, y, size, size);
-}
-function clearCanvas(){
-    ctx.clearRect(0,0,canvas.clientWidth, canvas.heigth);
-}
